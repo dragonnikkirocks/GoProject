@@ -1,0 +1,135 @@
+
+Programming with Go(lang)
+
+Nikita Nelson
+Matricularion no: 68818
+
+
+* The Go programming language
+
+- Modern language
+- Statically type-checked, dynamically type-safe
+- Built in concurrency support
+- Compact, concise, general-purpose
+- Garbage-collected
+- Fast compilation, efficient execution
+.image batman.png 300 300
+
+
+* Who uses Go?
+Google:
+
+- YouTube
+- dl.google.com
+
+Others:
+
+- Docker
+- SoundCloud
+- Canonical
+- CloudFlare
+- Mozilla
+- ...
+
+[[http://golang.org/wiki/GoUsers][golang.org/wiki/GoUsers]]
+
+
+* Hello World
+.play 1-basic/helloworld.go
+.image RickAndMorty.png 300 300
+
+* Some Go features
+
+.background Golang_logo.png
+
+* Go types
+
+- primitive types
+
+	int, uint, int8, uint8, ...
+	bool, string
+	float32, float64
+	complex64, complex128
+
+
+- slices and arrays
+
+	[]int, [3]string, []struct{ Name string }
+
+- maps
+
+	map[string]int
+
+* Control loops
+.play 1-basic/main.go /^//START/,/^//END/ HL12
+
+* Structs
+
+.play 4-structs/main.go /^//START/,/^//END/ HL12
+
+* Anoymous Structs
+
+.play 5-anoymousstructs/main.go /^//START/,/^//END
+
+* Functions
+
+.play 6-functions/main.go /^//START/,/^//END
+
+* Pointers
+
+.play 7-pointers/main.go /^//START/,/^//END
+.image stranger.png 300 300
+
+* Recievers
+
+.play 8-recievers/main.go /^//START/,/^//END
+
+* Concurrency
+It is part of the language, not a library
+
+Based on three concepts:
+
+- goroutines: lightweight threads
+- channels: typed pipes used to communicate and synchronize between goroutines
+- select: control structure to coordinate concurrent operations
+
+.image wonder.png 300 300
+
+* Goroutines
+
+- The _go_ statement launches a function call as a goroutine
+	go f()
+	go f(x, y, ...)
+
+- A goroutine runs concurrently (but not necessarily in parallel)
+- A goroutine has its own stack
+
+
+* A simple example
+
+.code 10-GoConcurrency/slideexample.go /f START/,/f END/
+
+Function f is launched as 3 different goroutines, all running concurrently:
+
+.play 10-GoConcurrency/slideexample.go /main START/,/main END/
+
+
+* Channels
+
+- The challenge with concurrent programming stems from sharing data.
+- Channels help make concurrent programming saner by taking shared data out of the picture. 
+- A channel is a communication pipe between goroutines which is used to pass data. 
+- In other words, a goroutine that has data can pass it to another goroutine via a channel. The result is that, at any point in time, only one goroutine has access to the data.
+
+	c := make(chan int)
+
+
+* Channel -example
+
+.code 11-channel/main.go /main START/,/main END/
+
+* Resources
+
+- https://play.golang.org/
+- https://golang.org/doc/effective_go
+- https://github.com/avelino/awesome-go

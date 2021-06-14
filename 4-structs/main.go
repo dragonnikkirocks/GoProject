@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+//START OMIT
+
 type products struct {
 	name string
     chara []string
@@ -21,6 +23,7 @@ fmt.Println(product1.name)//dot operator to access each element
 for _,value:= range product1.chara{
 	fmt.Printf("%v is a charachteristic\n", value)
 }
+//END OMIT
 
 type DiaryProducts struct {
 	 products

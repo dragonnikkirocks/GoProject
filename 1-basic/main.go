@@ -2,8 +2,10 @@ package main
 
 import("fmt")
 
-func main(){
 
+func main(){
+  //START OMIT
+  // HL12
 //single for loop
 sum:=0
 var i=0
@@ -23,4 +25,7 @@ for{
   sum++
 
 }
+
+//END OMIT
 }
+

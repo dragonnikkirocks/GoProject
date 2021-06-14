@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 	)
-
+//START OMIT
 func average(xs []float64) float64 {
 	total := 0.0
 	for _, v := range xs {
@@ -28,6 +28,7 @@ func add(args ...int) int {
 	return total
 }
 
+//END OMIT
 //Closure
 func makeOddGenerator () func ()int{
 	i:=1

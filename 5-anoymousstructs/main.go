@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-
+//START OMIT
 func main(){
 
 	subjects:= struct {
@@ -23,7 +23,5 @@ func main(){
 		fmt.Printf("%v version :%v and semester %v\n",subjects.name,key,value)
 
 	}
-
-
-
 }
+//END OMIT

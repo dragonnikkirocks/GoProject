@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-
+//START OMIT
 func one(xPtr *int) {
 	*xPtr = 1
 }
@@ -11,3 +11,4 @@ func main() {
 	fmt.Println(*xPtr) // x is 1
 	fmt.Println(xPtr)//memory address of xPtr
 }
+//END OMIT

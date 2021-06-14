@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//START OMIT
 type rectangle struct {
 	length float64
 	breadth float64
@@ -26,3 +27,4 @@ func main() {
 	fmt.Println("The new area is ",r.areaCalculate())
 
 }
+//END OMIT
